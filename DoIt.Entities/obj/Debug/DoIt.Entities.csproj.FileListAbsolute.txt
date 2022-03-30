@@ -1,0 +1,12 @@
+C:\Users\muham\source\repos\DoIt\DoIt.Entities\bin\Debug\DoIt.Entities.dll
+C:\Users\muham\source\repos\DoIt\DoIt.Entities\bin\Debug\DoIt.Entities.pdb
+C:\Users\muham\source\repos\DoIt\DoIt.Entities\obj\Debug\DoIt.Entities.csproj.AssemblyReference.cache
+C:\Users\muham\source\repos\DoIt\DoIt.Entities\obj\Debug\DoIt.Entities.csproj.CoreCompileInputs.cache
+C:\Users\muham\source\repos\DoIt\DoIt.Entities\obj\Debug\DoIt.Entities.dll
+C:\Users\muham\source\repos\DoIt\DoIt.Entities\obj\Debug\DoIt.Entities.pdb
+C:\Users\Semih\source\repos\DoIt\DoIt.Entities\bin\Debug\DoIt.Entities.dll
+C:\Users\Semih\source\repos\DoIt\DoIt.Entities\bin\Debug\DoIt.Entities.pdb
+C:\Users\Semih\source\repos\DoIt\DoIt.Entities\obj\Debug\DoIt.Entities.csproj.AssemblyReference.cache
+C:\Users\Semih\source\repos\DoIt\DoIt.Entities\obj\Debug\DoIt.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Semih\source\repos\DoIt\DoIt.Entities\obj\Debug\DoIt.Entities.dll
+C:\Users\Semih\source\repos\DoIt\DoIt.Entities\obj\Debug\DoIt.Entities.pdb
