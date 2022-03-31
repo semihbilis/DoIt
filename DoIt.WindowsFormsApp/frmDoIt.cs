@@ -43,7 +43,7 @@ namespace DoIt.WindowsFormsApp
                 _selectedProject = _efProjectDal.Get(f => f.OrganizationId == _selectedOrganization.Id);
             }
 
-            forumRefresh();
+            forumRefresh(1);
 
             quotes = _efQuoteDal.GetList(f => f.UserId == _signedUser.Id);
             if (quotes.Count == 0)
@@ -95,8 +95,11 @@ namespace DoIt.WindowsFormsApp
             }
         }
 
-        private void forumRefresh()
+        private void forumRefresh(int s = 0)
         {
+            if (s == 0)
+                pnlStatuses.Controls.Clear();
+
             if (_selectedOrganization != null)
             {
                 tsmiOrganizationname.Text = _selectedOrganization.Name;
@@ -121,17 +124,25 @@ namespace DoIt.WindowsFormsApp
                 foreach (Status status in _selectedProject.Statuses)
                 {
                     ucStatus ucStatus = new ucStatus(status.Id);
-                    this.Controls.Add(ucStatus);
+                    pnlStatuses.Controls.Add(ucStatus);
                     ucStatus.BringToFront();
                     ucStatus.Dock = DockStyle.Left;
                 }
+            }
+            AddDefultUcStatusInForm();
+
+            quotesRefresh();
+        }
+
+        public void AddDefultUcStatusInForm()
+        {
+            if (!pnlStatuses.Controls.ContainsKey("ucStatus"))
+            {
                 ucStatus ucStatusCreate = new ucStatus();
-                this.Controls.Add(ucStatusCreate);
+                pnlStatuses.Controls.Add(ucStatusCreate);
                 ucStatusCreate.BringToFront();
                 ucStatusCreate.Dock = DockStyle.Left;
             }
-
-            quotesRefresh();
         }
 
         private void definitionsCleanupRankClear(string level)
@@ -205,6 +216,11 @@ namespace DoIt.WindowsFormsApp
                 forumRefresh();
                 frmCQuote.Dispose();
             }
+        }
+
+        private void pnlStatuses_ControlRemoved(object sender, ControlEventArgs e)
+        {
+            AddDefultUcStatusInForm();
         }
 
 

@@ -38,6 +38,7 @@ namespace DoIt.WindowsFormsApp
             this.tsmiExit = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiProjectname = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiQuoteDoIt = new System.Windows.Forms.ToolStripMenuItem();
+            this.pnlStatuses = new System.Windows.Forms.Panel();
             this.msTopmenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,27 +78,27 @@ namespace DoIt.WindowsFormsApp
             this.tsmiOptions.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiQuotes});
             this.tsmiOptions.Name = "tsmiOptions";
-            this.tsmiOptions.Size = new System.Drawing.Size(180, 22);
+            this.tsmiOptions.Size = new System.Drawing.Size(117, 22);
             this.tsmiOptions.Text = "Options";
             // 
             // tsmiQuotes
             // 
             this.tsmiQuotes.Name = "tsmiQuotes";
-            this.tsmiQuotes.Size = new System.Drawing.Size(180, 22);
+            this.tsmiQuotes.Size = new System.Drawing.Size(112, 22);
             this.tsmiQuotes.Text = "Quotes";
             this.tsmiQuotes.Click += new System.EventHandler(this.quotesToolStripMenuItem_Click);
             // 
             // tsmiLogOut
             // 
             this.tsmiLogOut.Name = "tsmiLogOut";
-            this.tsmiLogOut.Size = new System.Drawing.Size(180, 22);
+            this.tsmiLogOut.Size = new System.Drawing.Size(117, 22);
             this.tsmiLogOut.Text = "Log Out";
             this.tsmiLogOut.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
             // 
             // tsmiExit
             // 
             this.tsmiExit.Name = "tsmiExit";
-            this.tsmiExit.Size = new System.Drawing.Size(180, 22);
+            this.tsmiExit.Size = new System.Drawing.Size(117, 22);
             this.tsmiExit.Text = "Exit";
             this.tsmiExit.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -120,11 +121,22 @@ namespace DoIt.WindowsFormsApp
             this.tsmiQuoteDoIt.Text = "Always Do It";
             this.tsmiQuoteDoIt.Click += new System.EventHandler(this.tsmiQuoteDoIt_Click);
             // 
+            // pnlStatuses
+            // 
+            this.pnlStatuses.AutoSize = true;
+            this.pnlStatuses.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlStatuses.Location = new System.Drawing.Point(0, 24);
+            this.pnlStatuses.Name = "pnlStatuses";
+            this.pnlStatuses.Size = new System.Drawing.Size(800, 727);
+            this.pnlStatuses.TabIndex = 1;
+            this.pnlStatuses.ControlRemoved += new System.Windows.Forms.ControlEventHandler(this.pnlStatuses_ControlRemoved);
+            // 
             // frmDoIt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 751);
+            this.Controls.Add(this.pnlStatuses);
             this.Controls.Add(this.msTopmenu);
             this.MainMenuStrip = this.msTopmenu;
             this.Name = "frmDoIt";
@@ -150,5 +162,6 @@ namespace DoIt.WindowsFormsApp
         private System.Windows.Forms.ToolStripMenuItem tsmiProjectname;
         private System.Windows.Forms.ToolStripMenuItem tsmiExit;
         private System.Windows.Forms.ToolStripMenuItem tsmiQuotes;
+        private System.Windows.Forms.Panel pnlStatuses;
     }
 }
